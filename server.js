@@ -1,7 +1,7 @@
 //Set All Require
 const express = require("express");
 const bodyParser = require("body-parser");
-const routes = require("./controllers/catsController.js");
+const routes = require("./controllers/burgers_controller.js");
 const handlebars = require("express-handlebars");
 const PORT = process.env.PORT || 8080;
 const app = express();
