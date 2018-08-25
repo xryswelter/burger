@@ -2,7 +2,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const routes = require("./controllers/burgers_controller.js");
-const handlebars = require("express-handlebars");
+const exphbs = require("express-handlebars");
 const PORT = process.env.PORT || 8080;
 const app = express();
 //{Insert cookiecut from other apps in class}
@@ -13,8 +13,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
 
-//Use of handlbar code f
-app.engine("handlebars", handlebars({ defaultLayout: "main" }));
+//Use of handlbar code 
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 

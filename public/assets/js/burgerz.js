@@ -5,7 +5,7 @@ $(function() {
     var eat = $(this).data("consume");
 
     var consumption = {
-      consume: eat
+      consumption: eat
     };
 
     // Send the PUT request.
@@ -14,7 +14,7 @@ $(function() {
       data: consumption
     }).then(
       function() {
-        console.log("changed sleep to", eat);
+        console.log("changed burger to", eat);
         // Reload the page to get the updated list
         location.reload();
       }
@@ -26,8 +26,7 @@ $(function() {
     event.preventDefault();
 
     var newBurger = {
-      name: $("#ca").val().trim(),
-      consume: $("[name=consume]:checked").val().trim()
+      name: $("#br").val().trim(),
     };
 
     // Send the POST request.

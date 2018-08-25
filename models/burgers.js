@@ -1,6 +1,7 @@
-var orm = require("../config/orm.js");
 
-var cat = {
+let orm = require("../config/orm.js");
+
+let burger = {
   all: function(callback) {
     orm.all("burger", function(res) {
       callback(res);
@@ -23,3 +24,5 @@ var cat = {
     });
   }
 };
+
+module.exports = burger;

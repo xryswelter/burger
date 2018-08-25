@@ -5,7 +5,7 @@
 <ul>
   {{#each hamburger}}
     {{#unless consumption}}
-      {{> burger/burger-partial consume=true}}
+      {{> burger/burger-partial consumption=false}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -15,7 +15,7 @@
 <ul>
   {{#each hamburger}}
     {{#if consumption}}
-      {{> burger/burger-partial consume=false}}
+      {{> burger/burger-partial consumption=true}}
     {{/if}}
   {{/each}}
 </ul>
@@ -24,14 +24,8 @@
 <form class="create-form">
 
   <div class="form-group">
-    <label for="ca">Burger Name</label>
-    <input type="text" id="ca" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="consumption">Have you eaten it yet?</label><br>
-    <input type="radio" name="consume" value="1" checked> Yep!<br>
-    <input type="radio" name="consume" value="0"> Nope!
+    <label for="br">Burger Name</label>
+    <input type="text" id="br" name="name">
   </div>
 
   <button type="submit">Enter In Hamburger</button>
